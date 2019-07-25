@@ -37,14 +37,17 @@ export default function Card(props) {
     console.log(getProductImageLink(props.item), "hejs")
     return (
         <div className="container">
-                <div class="card row flex-row">
+                <div class="card row flex-row" style={{background: "#fff"}}>
                     <div className="image col-3">
                         <img src={getProductImageLink(props.item)} alt={props.item.name} className={styles.small}/>
                     </div>
                     <div className="card-body col-8 ml-4">
-                        <h5 class="card-title">{props.item.name}</h5>
+                        <h5 className="card-title">{props.item.name}</h5>
                         <div className="d-none d-md-flex d-lg-flex">
                             <p className="card-text pt-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <div className="ml-2 mt-2">
+                                <button type="button" className="btn btn-primary" style={{whiteSpace: "nowrap"}}>Jamfor pris</button>
+                            </div>
                         </div>
                         <div className="d-flex align-items-end" style={{height: 100}}>
                             <div>

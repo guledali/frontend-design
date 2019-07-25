@@ -4,3 +4,10 @@
         width: 150px;
     }
   }
+
+  @media only screen and (max-width: 340px) {
+    .small {
+        height: 100px;
+        width: 100px;
+    }
+  }
