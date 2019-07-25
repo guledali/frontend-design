@@ -1,0 +1,6 @@
+@media only screen and (max-width: 640px) {
+    .small {
+        height: 150px;
+        width: 150px;
+    }
+  }

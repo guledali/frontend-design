@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { getCategoryList } from './state/category';
 import './Category.scss';
 import { getProductImageLink } from '../../utils/imageUtils';
+import Card from './Card'
 
 export default class Category extends Component {
   state = { 
@@ -27,17 +28,16 @@ export default class Category extends Component {
 
      const { category } = this.state
     return (
-      <div className="hello-world">
-        <ul>
+      <div className="bg-light py-3">
           {category.products.map(item => (
-            <li key={item.id}>
-              <span>{item.name}</span>
-              <img src={getProductImageLink(item)} alt={item.name} />
-              <span>fr. {item.cheapestPrice.amount} kr</span>
-            </li>
+            <Card item={item} key={item.id} />
           ))}
-        </ul>
       </div>
     );
   }
 }
+
+
+{/* <span>{item.name}</span> */}
+{/* <img src={getProductImageLink(item)} alt={item.name} /> */}
+{/* <span>fr. {item.cheapestPrice.amount} kr</span> */}
