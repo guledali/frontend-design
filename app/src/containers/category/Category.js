@@ -28,7 +28,7 @@ export default class Category extends Component {
 
      const { category } = this.state
     return (
-      <div className="py-3" style={{ background: "EDF2F7"}}>
+      <div className="py-3">
           {category.products.map(item => (
             <Card item={item} key={item.id} />
           ))}

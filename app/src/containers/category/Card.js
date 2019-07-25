@@ -31,21 +31,20 @@
 
 import React from 'react'
 import { getProductImageLink } from '../../utils/imageUtils';
+import { roundStar } from '../../utils/roundingStars'
 import styles from './Card.module.css';
 
 
 import Rater from 'react-rater'
 import 'react-rater/lib/react-rater.css'
-function roundStar(value) {
-    return Math.round(value)
-}
+
 
 export default function Card(props) {
     //console.log(getProductImageLink(props.item), "hejs")
 
     return (
         <div className="container">
-                <div className="card row flex-row" style={{background: "#fff"}}>
+                <div className="card row flex-row">
                     <div className="image col-3">
                         <img src={getProductImageLink(props.item)} alt={props.item.name} className={styles.small}/>
                         <div className="mt-2 flex" style={{width: 80}}>
