@@ -43,27 +43,27 @@ export default function Card(props) {
     //console.log(getProductImageLink(props.item), "hejs")
 
     return (
-        <div className="container">
-                <div className="card row flex-row">
-                    <div className="image col-3">
-                        <img src={getProductImageLink(props.item)} alt={props.item.name} className={styles.small}/>
-                        <div className="mt-2 flex" style={{width: 80}}>
+        <div className={styles.CardContainer}>
+                <div className={styles.CardWrapper}>
+                    <div className={styles.CardGrid3}>
+                        <img src={getProductImageLink(props.item)} alt={props.item.name} className={styles.ImageSmall}/>
+                        <div className={styles.MoveStar}>
                         <Rater total={5} rating={roundStar(props.item.rating.averageRating)} interactive={false} />
                         </div>
                     </div>
-                    <div className="card-body col-8 ml-4">
-                        <h5 className="card-title">{props.item.name}</h5>
-                        <div className="d-none d-md-flex d-lg-flex">
-                            <p className="card-text pt-3">{props.item.description}</p>
-                            <div className="ml-2 mt-2">
-                                <button type="button" className="btn btn-primary" style={{whiteSpace: "nowrap"}}>Jamfor pris</button>
+                    <div className={styles.CardBody}>
+                        <h5 className={styles.CardTitle}>{props.item.name}</h5>
+                        <div className={styles.CardTextContainer}>
+                            <p className={styles.CardText}>{props.item.description}</p>
+                            <div className={styles.CardButtonContainer}>
+                                <button className={styles.CardButton} style={{whiteSpace: "nowrap"}}>Jamfor pris</button>
                             </div>
                         </div>
-                        <div className="d-flex align-items-end" style={{height: 100}}>
+                        <div className={styles.CardFooterContainer}>
                             <div>
                                 fr. {props.item.cheapestPrice.amount} kr
                             </div>
-                            <div className="ml-5">
+                            <div className={styles.CardStore}>
                                  {props.item.numberOfMerchants} butiker
                             </div>
                         </div>
