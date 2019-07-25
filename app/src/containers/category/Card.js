@@ -31,20 +31,31 @@
 
 import React from 'react'
 import { getProductImageLink } from '../../utils/imageUtils';
-import styles from './Card.module.css'; 
+import styles from './Card.module.css';
+
+
+import Rater from 'react-rater'
+import 'react-rater/lib/react-rater.css'
+function roundStar(value) {
+    return Math.round(value)
+}
 
 export default function Card(props) {
-    console.log(getProductImageLink(props.item), "hejs")
+    //console.log(getProductImageLink(props.item), "hejs")
+
     return (
         <div className="container">
-                <div class="card row flex-row" style={{background: "#fff"}}>
+                <div className="card row flex-row" style={{background: "#fff"}}>
                     <div className="image col-3">
                         <img src={getProductImageLink(props.item)} alt={props.item.name} className={styles.small}/>
+                        <div className="mt-2 flex" style={{width: 80}}>
+                        <Rater total={5} rating={roundStar(props.item.rating.averageRating)} interactive={false} />
+                        </div>
                     </div>
                     <div className="card-body col-8 ml-4">
                         <h5 className="card-title">{props.item.name}</h5>
                         <div className="d-none d-md-flex d-lg-flex">
-                            <p className="card-text pt-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p className="card-text pt-3">{props.item.description}</p>
                             <div className="ml-2 mt-2">
                                 <button type="button" className="btn btn-primary" style={{whiteSpace: "nowrap"}}>Jamfor pris</button>
                             </div>

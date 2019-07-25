@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { getCategoryList } from './state/category';
 import './Category.scss';
-import { getProductImageLink } from '../../utils/imageUtils';
+//import { getProductImageLink } from '../../utils/imageUtils';
 import Card from './Card'
 
 export default class Category extends Component {
@@ -37,7 +37,3 @@ export default class Category extends Component {
   }
 }
 
-
-{/* <span>{item.name}</span> */}
-{/* <img src={getProductImageLink(item)} alt={item.name} /> */}
-{/* <span>fr. {item.cheapestPrice.amount} kr</span> */}
