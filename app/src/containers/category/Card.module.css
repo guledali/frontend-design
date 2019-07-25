@@ -1,0 +1,142 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 640px) {
+    .ImageSmall {
+        height: 150px;
+        width: 150px;
+    }
+  }
+
+  @media only screen and (max-width: 340px) {
+    .ImageSmall {
+        height: 100px;
+        width: 100px;
+    }
+  }
+
+
+  .CardContainer {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+  .CardWrapper {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    /* row */
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+          /*  flex row */
+          flex-direction: row;
+
+        
+    
+  }
+
+  /* col-3 */
+    .CardGrid3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+
+      /* mt-2 flex */
+        .MoveStar {
+          display: flex;
+          margin-top: .5rem;
+          width: 80px;
+          /* Move the star left */
+          margin-left: 3px;
+        }
+
+.CardBody {
+  flex: 1 1 auto;
+  padding: 1.25rem;
+    /* col-8 ml-4 */
+      flex: 0 0 66.666667%;
+      max-width: 66.666667%;
+
+      margin-left: 1.5rem !important;
+}
+
+.CardTitle {
+  margin-bottom: .75rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.CardTextContainer {  
+  /* d-none you find (d-md-flex d-lg-flex below) Hide on all exept md, lg */
+  display: none;
+}
+
+.CardText{
+  /*  pt-3 */
+  padding-top: 1rem;
+}
+
+.CardButtonContainer {
+  /* ml-2 mt-2 */
+  margin-left: .5rem;
+  margin-top: .5rem;
+}
+
+.CardButton{
+  /* btn  */
+  font-weight: 700;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: .25rem;
+    /* btn-blue  */
+    background-color: #2595DD !important;
+    color: #fff!important;
+    border: 2px solid #2A6DAB !important;
+}
+
+.CardFooterContainer{
+  /* d-flex align-items-end & height: 100px; */
+    display: flex;
+    align-items: flex-end;
+    height: 100px;
+    white-space: nowrap;
+}
+.CardPrice{}
+
+
+.CardStore{
+  /* ml-5 */
+  /* margin-left: 3rem */
+  padding-left: 1rem;
+}
+
+
+
+@media only screen and (min-width: 992px) {
+  .CardTextContainer {
+    display: flex!important;
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+  .CardTextContainer {
+    display: flex!important;
+  }
+}
